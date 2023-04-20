@@ -1,0 +1,79 @@
+@use '_variables';
+
+.navigation {
+    display: flex;
+    flex-direction: row;
+
+    &__button {
+        padding: 5px 10px;
+        border: 1px solid variables.$orange;
+        border-radius: 10px;
+        background-color: transparent;
+        cursor: pointer;
+        transition: border-color 0.3s, color 0.3s;
+        margin-right: 30px;
+
+        &:hover {
+            border-color: variables.$yellow;
+        }
+
+        &:hover .navigation__link {
+            color: variables.$yellow;
+        }
+
+    }
+
+    &__disabled {
+        background-color: variables.$grey;
+        cursor: auto;
+      
+        &:hover {
+            background-color: variables.$grey;
+            color: variables.$orange;
+            border-color: variables.$orange;
+        }
+
+        &:hover .navigation__link {
+            color: variables.$orange;
+        }
+    }
+
+    &__link {
+        transition: color 0.3s;
+        color: variables.$orange;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .navigation {
+        flex-direction: column;
+        position: fixed;
+        left: 0;
+        top: 0px;
+        right: 0;
+        bottom: 0;
+        background-color: variables.$blue;
+        width: 100%;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity .3s, visibility .3s, transform .6s;
+        align-items: center;
+        justify-content: flex-start;
+        transform: translateX(100%);
+        gap: 15px;
+
+        &_phone {
+            visibility: visible;
+            opacity: 1;
+            transform: translateX(0);
+            padding-top: 70px;
+            z-index: 5;
+        }
+
+        &__button {
+            border: none;
+            font-size: 36px;
+        }
+    }
+}

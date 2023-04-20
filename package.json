@@ -1,0 +1,28 @@
+{
+  "name": "agency",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "watch": "set NODE_ENV=development & gulp watch",
+    "build": "set NODE_ENV=production & gulp build"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.18.13",
+    "@babel/preset-env": "^7.18.10",
+    "babel-loader": "^8.2.5",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
+    "gulp-sass": "^5.1.0",
+    "sass": "^1.52.1",
+    "webpack": "^5.74.0",
+    "webpack-stream": "^7.0.0"
+  },
+  "dependencies": {
+    "@glidejs/glide": "^3.6.0",
+    "bootstrap": "^5.2.0",
+    "normalize.css": "^8.0.1"
+  },
+  "description": ""
+}

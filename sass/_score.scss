@@ -1,0 +1,8 @@
+@use '_variables';
+
+.score {
+    display: flex;
+    flex-direction: row;
+    color: variables.$orange;
+    align-items: center;
+}

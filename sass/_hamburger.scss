@@ -1,0 +1,54 @@
+@use '_variables';
+
+.hamburger {    
+    display: none;   
+    height: 15px;
+    width: 30px;
+    cursor: pointer;
+    position: relative;
+    z-index: 10;
+
+    &_close &__line {
+
+        &_2 {
+            width: 0;
+        }
+        
+        &_1 {
+            transform:  translateX(0px) rotate(34deg);
+            background-color: red;
+        }
+
+        &_3 {
+            transform: translateX(0px) rotate(-35deg);
+            background-color: red;
+        }
+    }
+
+    &__line {
+        width: 100%;
+        height: 2px;
+        background-color: variables.$orange;
+        border-radius: 2px;
+        transition: width .3s, transform .3s, background-color 0.3s;
+
+        &_1 {
+            transform-origin: 8% 0%;
+        }
+
+        &_3 {
+            transform-origin: 8% 100%;
+        }
+    }    
+
+}
+
+@media screen and (max-width: 768px) {
+    .hamburger {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+}
+

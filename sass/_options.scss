@@ -1,0 +1,72 @@
+@use '_variables';
+
+.options {
+    
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    color: white;
+    justify-content: space-between;
+
+    &__block {
+        width: 45%;
+        margin: 20px 0;
+        box-sizing: border-box;
+    }
+
+    &__description-wrapper {
+        background-color: variables.$blue-dark;
+        padding: 20px;
+        border-radius: 15px;
+    }
+    
+    &__item {
+        padding: 10px 0 10px 40px;
+        border-radius: 15px;
+        background-color: variables.$blue-dark;
+        transition: background-color 0.3s;
+        cursor: pointer;
+        position: relative;
+        margin-bottom: 2px;
+        font-size: 24px;
+
+        &:hover {
+            background-color: variables.$orange;
+        }
+
+        &::before {
+            content: "";
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: variables.$blue-light;
+            position: absolute;
+            left: 20px;
+            top: 20px;
+            transition: background-color 0.3s;
+        }
+
+        &.correct::before {
+            background-color: variables.$green;
+        }
+
+        &.wrong::before {
+            background-color: variables.$red;
+        }
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .options {
+      flex-direction: column;
+      
+      &__block {
+        width: 100%;
+      }
+
+      &__item {
+        font-size: 20px;
+      }
+  
+    }
+  }

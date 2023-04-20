@@ -1,0 +1,44 @@
+@use '_variables';
+
+.gifs {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    box-sizing: border-box;
+
+    &__img {
+        width: 23%;
+        height: 200px;
+        object-fit: cover;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .gifs {
+        flex-direction: column;
+        width: 30%;
+
+        &__img {
+            width: 100%;
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .gifs {
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+        gap: 0;
+        justify-content: space-between;
+
+        &__img {
+            width: 49%;
+
+            &_2 {
+                display: none;
+            }
+        }
+        
+    }
+}

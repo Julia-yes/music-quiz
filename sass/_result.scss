@@ -1,0 +1,61 @@
+@use '_variables';
+
+.result {
+  &__text {
+    color: variables.$orange;
+    font-size: 36px;
+    text-align: center;
+    margin: auto 0;
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+    background-color: variables.$blue-dark;
+    border-radius: 25px;
+    padding: 50px;
+  }
+
+  &__link {
+    background-color: variables.$blue;
+    color: variables.$orange-dark;
+    padding: 5px 10px;
+    border-radius: 10px;
+    border: 1px solid variables.$orange-dark;
+    transition: color 0.3s, border-color 0.3s;
+
+      &:hover {
+        color: variables.$yellow;
+        border-color: variables.$yellow;
+    }
+  }
+
+  &__message {
+    margin-bottom: 50px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .result {
+    
+    &__text {
+      font-size: 24px;
+      padding: 20px;
+    }
+
+    &__message {
+      margin-bottom: 30px;
+    }
+  }
+}
+
+
+@media screen and (max-width: 576px) {
+  .result {
+    
+    &__text {
+      width: 250px;
+    }
+  }
+}
+
+

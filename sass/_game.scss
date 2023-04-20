@@ -1,0 +1,74 @@
+@use '_variables';
+
+.game {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  background-color: variables.$blue;
+  padding-top: 30px;
+
+  &__navigation {
+    background-color: variables.$orange;
+    border-radius: 5px;
+    width: 100%;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__item {
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+  }
+
+  &__active {
+    background-color: variables.$orange-dark;
+
+  }
+
+  &__button {
+    width: 70%;
+    margin-bottom: 30px;
+    background-color: variables.$orange;
+    color: variables.$blue-dark;
+    font-size: 24px;
+    border-radius: 15px;
+    padding: 10px;
+    border: 1px solid variables.$blue-dark;
+    cursor: pointer;
+    transition: color 0.3s, background-color 0.3s;
+    text-align: center;
+    
+      &:hover {
+        background-color: variables.$orange-dark;
+        color: white;
+      }
+  }
+
+  &__disabled {
+  background-color: variables.$grey;
+  cursor: auto;
+
+    &:hover {
+      background-color: variables.$grey;
+      color: variables.$blue-dark;
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .game {
+    
+    &__list {
+      flex-wrap: wrap;
+    }
+
+  }
+}
+

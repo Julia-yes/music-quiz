@@ -1,0 +1,59 @@
+@use '_variables';
+
+footer {
+    background-color: variables.$blue-dark;
+    flex-grow: 0;
+}
+
+.footer {
+    padding: 10px 0;
+    display: flex;
+    flex-direction: row;
+    color: variables.$orange;
+    justify-content: space-between;
+    align-items: center;
+
+    &__link {
+        color: variables.$orange-dark;
+    }
+
+    &__left {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__author {
+        display: flex;
+        flex-direction: row;
+    }
+
+    &__text {
+        padding-right: 5px;
+    }
+
+    &__school {
+        cursor: pointer;
+        border-radius: 30px;
+        background-color: white;
+        padding: 5px 10px;
+
+        &-img {
+            width: 100px;
+        }
+    }
+
+    &__year {
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .footer {
+        &__author {
+            flex-direction: column;
+        }
+        &__year {
+            text-align: left;
+        }
+    }
+}

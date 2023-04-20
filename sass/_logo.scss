@@ -1,0 +1,52 @@
+@use '_variables';
+
+.logo {
+    display: flex;
+    flex-direction: row;
+
+    &__img {
+        height: 70px;
+    }
+
+    &__name {
+        font-family: 'Modak', cursive;
+        font-size: 24px;
+        text-transform: uppercase;
+        line-height: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        
+
+        &_big {
+            background: linear-gradient(45deg, variables.$orange-dark 33%, variables.$orange 66%, variables.$yellow);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            color: #0B2349;
+        }
+
+        &_small {
+            font-family: 'Rum Raisin', sans-serif;
+            font-size: 18px;
+            text-transform: lowercase;
+            color: variables.$red;
+        }
+
+        &_red{
+            color: variables.$red;
+        }
+
+        &_green{
+            color: variables.$yellow;
+        }
+
+        &_orange{
+            color: variables.$orange;
+        }
+
+        &_blue{
+            color: variables.$blue;
+        }
+    }
+}

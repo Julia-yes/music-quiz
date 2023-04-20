@@ -1,0 +1,160 @@
+@use '_variables';
+
+.player {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    padding-top: 30px;
+    
+    &__button {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        border: 2px solid variables.$orange;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
+
+    &__svg {
+        width: 20px;
+    }
+
+    &__area {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+    }
+
+    &__track-zone {
+        position: relative;
+    }
+
+    &__line {
+        height: 4px;
+        width: 100%;        
+        margin: 10px 0;
+        background-color: aqua;
+    }
+
+    &__circle {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background-color: variables.$orange;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    &__timer {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding-top: 10px;
+    }
+
+    &__img {
+        width: 30px;
+        background-color: variables.$blue-dark;
+        padding-left: 30px;
+    }
+
+    &__volume {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        position: relative;
+    }
+
+}
+
+input[type=range] {
+    -webkit-appearance: none;
+    width: 30%;
+  }
+  input[type=range]:focus {
+    outline: none;
+  }
+  input[type=range]::-webkit-slider-runnable-track {
+    width: 30%;
+    height: 4px;
+    cursor: pointer;
+    animate: 0.2s;
+    background: variables.$grey;
+  }
+  input[type=range]::-webkit-slider-thumb {
+    height: 20px;
+    width: 20px;
+    border: 1px solid variables.$orange-dark;
+    border-radius: 50%;
+    background: variables.$orange;
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: -8px;
+  }
+  input[type=range]:focus::-webkit-slider-runnable-track {
+    background: variables.$grey;
+  }
+  input[type=range]::-moz-range-track {
+    width: 30%;
+    height: 4px;
+    cursor: pointer;
+    animate: 0.2s;
+    background: variables.$grey;
+  }
+  input[type=range]::-moz-range-thumb {
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background: variables.$orange;;
+    cursor: pointer;
+  }
+  input[type=range]::-ms-track {
+    width: 30%;
+    height: 4px;
+    cursor: pointer;
+    animate: 0.2s;
+    background: transparent;
+    border-color: transparent;
+    color: transparent;
+  }
+  input[type=range]::-ms-fill-lower {
+    background: variables.$orange;
+  }
+  input[type=range]::-ms-fill-upper {
+    background: variables.$orange;
+  }
+  input[type=range]::-ms-thumb {
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background: variables.$orange;
+    cursor: pointer;
+  }
+  input[type=range]:focus::-ms-fill-lower {
+    background: variables.$orange;
+  }
+  input[type=range]:focus::-ms-fill-upper {
+    background: variables.$orange;
+  }
+
+
+  
+@media screen and (max-width: 576px) {
+  .player {
+
+    gap: 10px;
+    
+    &__start {
+      font-size: 18px;
+    }
+    
+    &__end {
+      font-size: 18px;
+    }
+
+  }
+}

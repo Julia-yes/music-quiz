@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="./assets/logo/musical-note.png" />
+    <title>Baby-quiz</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Baby-quiz" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@400;700&family=Modak&family=Rum+Raisin&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body class="page">
+    <header>
+      <div class="wrapper">
+        <div class="header">
+          <div class="logo">
+            <img src="./assets/logo/music-png-photos.png" class="logo__img" alt="baby quiz" />
+            <div class="logo__name">
+              <div class="logo__name_big">baby</div>
+              <div class="logo__name_small">quiz</div>
+            </div>
+          </div>
+          <nav>
+            <ul class="navigation">
+              <li class="navigation__button">
+                <a href="./index.html" class="navigation__link">Домой</a>
+              </li>
+              <li class="navigation__button navigation__disabled">
+                <a href="#" class="navigation__link navigation__disabled">Начать игру</a>
+              </li>
+              <li class="navigation__button">
+                <a href="./gallery.html" class="navigation__link">Галерея</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="score">
+            <div class="score__text">Счёт :&#8194;</div>
+            <div class="score__result">0</div>
+          </div>
+          <div class="hamburger">
+            <div class="hamburger__line hamburger__line_1"></div>
+            <div class="hamburger__line hamburger__line_2"></div>
+            <div class="hamburger__line hamburger__line_3"></div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="wrapper">
+        <section class="game-area game">
+          <nav class="game__navigation">
+            <ul class="game__list">
+              <li class="game__item">Советские мультфильмы</li>
+              <li class="game__item">Pixar</li>
+              <li class="game__item">Disney</li>
+              <li class="game__item">Зарубежные мультсериалы</li>
+              <li class="game__item">Отечественные мультсериалы</li>
+              <li class="game__item">Мюзиклы</li>
+            </ul>
+          </nav>
+          <div class="game__question question">
+            <div class="question__image"></div>
+            <div class="question__info">
+              <div class="question__name">*****</div>
+              <div class="question__audio"></div>
+            </div>
+          </div>
+          <div class="game__options options">
+            <aside class="options__block options__list-wrapper"></aside>
+            <aside class="options__block options__description-wrapper">
+              Послушайте музыку и выберите вариант ответа
+            </aside>
+          </div>
+          <button class="game__button game__disabled" disabled>Следующий вопрос</button>
+        </section>
+      </div>
+    </main>
+    <footer>
+      <div class="wrapper">
+        <div class="footer">
+          <div class="footer__left">
+            <div class="footer__author">
+              <div class="footer__text">Made by</div>
+              <a href="https://github.com/Julia-yes" class="footer__link"> Julia Bolonikova</a>
+            </div>
+            <div class="footer__year">2022</div>
+          </div>
+          <div class="footer__school">
+            <a href="https://rs.school/js/" class="footer__school-name">
+              <img alt="rs-school" src="./assets/logo/rsLogo.svg" class="footer__school-img" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="./mist/js/main.js" defer></script>
+  </body>
+</html>
