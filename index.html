@@ -31,18 +31,18 @@
           </div>
           <nav>
             <ul class="navigation">
-              <li class="navigation__button">
-                <a href="./index.html" class="navigation__link">Домой</a>
-              </li>
               <li class="navigation__button navigation__disabled">
-                <a href="#" class="navigation__link navigation__disabled">Начать игру</a>
+                <a href="#" class="navigation__link navigation__disabled">Домой</a>
+              </li>
+              <li class="navigation__button">
+                <a href="./game_page.html" class="navigation__link">Начать игру</a>
               </li>
               <li class="navigation__button">
                 <a href="./gallery.html" class="navigation__link">Галерея</a>
               </li>
             </ul>
           </nav>
-          <div class="score">
+          <div class="score" style="opacity: 0">
             <div class="score__text">Счёт :&#8194;</div>
             <div class="score__result">0</div>
           </div>
@@ -56,31 +56,30 @@
     </header>
     <main>
       <div class="wrapper">
-        <section class="game-area game">
-          <nav class="game__navigation">
-            <ul class="game__list">
-              <li class="game__item">Советские мультфильмы</li>
-              <li class="game__item">Pixar</li>
-              <li class="game__item">Disney</li>
-              <li class="game__item">Зарубежные мультсериалы</li>
-              <li class="game__item">Отечественные мультсериалы</li>
-              <li class="game__item">Мюзиклы</li>
-            </ul>
-          </nav>
-          <div class="game__question question">
-            <div class="question__image"></div>
-            <div class="question__info">
-              <div class="question__name">*****</div>
-              <div class="question__audio"></div>
+        <section class="wrapper__home home">
+          <div class="home__block">
+            <div class="home__block-mini">
+              <img class="home__gif" src="./assets//gif/1.gif" />
+              <img class="home__gif" src="./assets//gif/2.gif" />
+            </div>
+            <div class="home__block-mini">
+              <img class="home__gif" src="./assets//gif/3.gif" />
+              <img class="home__gif" src="./assets//gif/4.gif" />
             </div>
           </div>
-          <div class="game__options options">
-            <aside class="options__block options__list-wrapper"></aside>
-            <aside class="options__block options__description-wrapper">
-              Послушайте музыку и выберите вариант ответа
-            </aside>
+          <div class="button__block">
+            <a href="./game_page.html" class="navigation__link">Начать игру</a>
           </div>
-          <button class="game__button game__disabled" disabled>Следующий вопрос</button>
+          <div class="home__block">
+            <div class="home__block-mini">
+              <img class="home__gif" src="./assets//gif/5.gif" />
+              <img class="home__gif" src="./assets//gif/6.gif" />
+            </div>
+            <div class="home__block-mini">
+              <img class="home__gif" src="./assets//gif/7.gif" />
+              <img class="home__gif" src="./assets//gif/8.gif" />
+            </div>
+          </div>
         </section>
       </div>
     </main>
